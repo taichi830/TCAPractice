@@ -9,16 +9,23 @@ import ComposableArchitecture
 import SwiftUI
 
 struct ContentView: View {
-    
+    let store: Store<CountersState, CountersAction>
     var body: some View {
         Form {
             Section {
-                CounterView(store: Store(initialState: CounterState(), reducer: counterReducer, environment: CounterEnvironment()), label: "Counter")
+                VStack {
+                    CounterView(store: self.store.scope(state: \.counter01, action: CountersAction.counter01), label: "Counter")
+                        .buttonStyle(.borderless)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    
+                    CounterView(store: self.store.scope(state: \.counter02, action: CountersAction.counter02), label: "Random Counter")
+                        .buttonStyle(.borderless)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
             } header: {
-                Text("Single Counter with TCA")
+                Text("Two Counter with TCA")
             }
-            .buttonStyle(.borderless)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
 
         }
         
@@ -27,6 +34,9 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(store: Store(
+            initialState: CountersState(),
+            reducer: countersReducer,
+            environment: CountersEnvironment()))
     }
 }
