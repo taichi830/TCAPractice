@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1E6FB228589C1B004EBE3C /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E6FB128589C1A004EBE3C /* SharedStore.swift */; };
 		CE2CDD7D2854FF0400A7DE25 /* TCAPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CDD7C2854FF0400A7DE25 /* TCAPracticeApp.swift */; };
 		CE2CDD7F2854FF0400A7DE25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CDD7E2854FF0400A7DE25 /* ContentView.swift */; };
 		CE2CDD812854FF0C00A7DE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2CDD802854FF0C00A7DE25 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE1E6FB128589C1A004EBE3C /* SharedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
 		CE2CDD792854FF0400A7DE25 /* TCAPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2CDD7C2854FF0400A7DE25 /* TCAPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAPracticeApp.swift; sourceTree = "<group>"; };
 		CE2CDD7E2854FF0400A7DE25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				CE470A6E28575F140072E5E9 /* CounterStore.swift */,
 				CE4B2ADF2857A352006E51C9 /* CountersStore.swift */,
 				CE470A7028576FCE0072E5E9 /* CounterView.swift */,
+				CE1E6FB128589C1A004EBE3C /* SharedStore.swift */,
 			);
 			path = TCAPractice;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			files = (
 				CE2CDD7F2854FF0400A7DE25 /* ContentView.swift in Sources */,
 				CE4B2AE02857A352006E51C9 /* CountersStore.swift in Sources */,
+				CE1E6FB228589C1B004EBE3C /* SharedStore.swift in Sources */,
 				CE470A6F28575F140072E5E9 /* CounterStore.swift in Sources */,
 				CE2CDD7D2854FF0400A7DE25 /* TCAPracticeApp.swift in Sources */,
 				CE470A7128576FCE0072E5E9 /* CounterView.swift in Sources */,
