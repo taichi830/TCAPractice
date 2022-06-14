@@ -7,39 +7,42 @@
 
 import ComposableArchitecture
 
+enum Tab {
+    case counter
+    case profile
+}
+
 struct SharedState: Equatable {
-    var countersState = CountersState()
+    var normalCounter = CounterState()
+    var randomCounter = CounterState()
     var currentTab = Tab.counter
-    
-    enum Tab {
-        case counter
-        case profile
-    }
-    
-    struct ProfileState: Equatable {
-        private(set) var count = 0
-        private(set) var currentTab: Tab
-        
-        fileprivate mutating func resetCount() {
-            self.count = 0
-            self.currentTab = .counter
-        }
-    }
-    
     var profile: ProfileState {
         get {
             ProfileState(
-                count: self.countersState.counter01.count,
+                count: self.normalCounter.count,
                 currentTab: self.currentTab
             )
         }
         set {
-            self.countersState.counter01.count = newValue.count
+            self.normalCounter.count = newValue.count
             self.currentTab = newValue.currentTab
         }
     }
-    
-    enum SharedStateAction: Equatable {
-    }
-    
 }
+
+enum SharedAction: Equatable {
+    case normalCounter(CounterAction)
+    case randomCounter(CounterAction)
+    case profile(ProfileAction)
+    case selectTab(Tab)
+}
+
+struct SharedEnvironment {}
+
+let sharedReducer = Reducer<SharedState, SharedAction, SharedEnvironment>.combine(
+    counterReducer.pullback(state: \SharedState.normalCounter, action: /SharedAction.normalCounter, environment: { _ in CounterEnvironment() }
+    ),
+    randomCounterReducer.pullback(state: \SharedState.randomCounter, action: /SharedAction.randomCounter, environment: { _ in CounterEnvironment() }
+    )
+    
+)
