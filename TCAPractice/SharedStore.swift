@@ -40,9 +40,22 @@ enum SharedAction: Equatable {
 struct SharedEnvironment {}
 
 let sharedReducer = Reducer<SharedState, SharedAction, SharedEnvironment>.combine(
-    counterReducer.pullback(state: \SharedState.normalCounter, action: /SharedAction.normalCounter, environment: { _ in CounterEnvironment() }
+    counterReducer.pullback(state: \SharedState.normalCounter, action: /SharedAction.normalCounter, environment: { _ in
+        CounterEnvironment()}
     ),
     randomCounterReducer.pullback(state: \SharedState.randomCounter, action: /SharedAction.randomCounter, environment: { _ in CounterEnvironment() }
-    )
+    ),
+    profileReducer.pullback(state: \SharedState.profile, action: /SharedAction.profile, environment: { _ in
+        ProfileEnvironment()}
+    ),
+    Reducer { state, action, _ in
+        switch action {
+        case .normalCounter, .randomCounter, .profile:
+            return .none
+        case let .selectTab(tab):
+            state.currentTab = tab
+            return .none
+        }
+    }
     
 )
