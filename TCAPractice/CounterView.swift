@@ -23,6 +23,7 @@ struct CounterView: View {
                 Button("-") { ViewStore.send(.decrementButtonTapped) }
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
