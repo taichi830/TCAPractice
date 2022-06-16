@@ -39,22 +39,6 @@ struct ContentView: View {
             }
         }
         .padding()
-//        Form {
-//            Section {
-//                VStack {
-//                    CounterView(store: self.store.scope(state: \.counter01, action: CountersAction.counter01), label: "Counter")
-//                        .buttonStyle(.borderless)
-//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-//
-//                    CounterView(store: self.store.scope(state: \.counter02, action: CountersAction.counter02), label: "Random Counter")
-//                        .buttonStyle(.borderless)
-//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                }
-//            } header: {
-//                Text("Two Counter with TCA")
-//            }
-//        }
-        
     }
 }
 
