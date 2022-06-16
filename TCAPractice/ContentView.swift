@@ -20,8 +20,15 @@ struct ContentView: View {
                 .pickerStyle(.segmented)
                 
                 if viewStore.state == .counter {
-                    CounterView(store: self.store.scope(state: \.normalCounter, action: SharedAction.normalCounter), label: "Counter")
-                        .buttonStyle(.borderless)
+                    Form {
+                        Section {
+                            CounterView(store: self.store.scope(state: \.normalCounter, action: SharedAction.normalCounter), label: "Counter")
+                                .buttonStyle(.borderless)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            CounterView(store: self.store.scope(state: \.randomCounter, action: SharedAction.randomCounter), label: "Random Counter")
+                                .buttonStyle(.borderless)
+                        }
+                    }
                 }
                 
                 if viewStore.state == .profile {
