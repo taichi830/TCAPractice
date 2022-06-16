@@ -19,7 +19,6 @@
 		CE470A6D28575C390072E5E9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = CE470A6C28575C390072E5E9 /* ComposableArchitecture */; };
 		CE470A6F28575F140072E5E9 /* CounterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE470A6E28575F140072E5E9 /* CounterStore.swift */; };
 		CE470A7128576FCE0072E5E9 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE470A7028576FCE0072E5E9 /* CounterView.swift */; };
-		CE4B2AE02857A352006E51C9 /* CountersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4B2ADF2857A352006E51C9 /* CountersStore.swift */; };
 		CEAC8D8D2859E519001F4E3A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8D8C2859E519001F4E3A /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +54,6 @@
 		CE2CDD992854FF0D00A7DE25 /* TCAPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE470A6E28575F140072E5E9 /* CounterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStore.swift; sourceTree = "<group>"; };
 		CE470A7028576FCE0072E5E9 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
-		CE4B2ADF2857A352006E51C9 /* CountersStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountersStore.swift; sourceTree = "<group>"; };
 		CEAC8D8C2859E519001F4E3A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,7 +112,6 @@
 				CE2CDD822854FF0C00A7DE25 /* Preview Content */,
 				CE470A7028576FCE0072E5E9 /* CounterView.swift */,
 				CE470A6E28575F140072E5E9 /* CounterStore.swift */,
-				CE4B2ADF2857A352006E51C9 /* CountersStore.swift */,
 				CE1E6FB32858F67B004EBE3C /* ProfileStore.swift */,
 				CE1E6FB128589C1A004EBE3C /* SharedStore.swift */,
 				CEAC8D8C2859E519001F4E3A /* ProfileView.swift */,
@@ -285,7 +282,6 @@
 			files = (
 				CEAC8D8D2859E519001F4E3A /* ProfileView.swift in Sources */,
 				CE2CDD7F2854FF0400A7DE25 /* ContentView.swift in Sources */,
-				CE4B2AE02857A352006E51C9 /* CountersStore.swift in Sources */,
 				CE1E6FB42858F67B004EBE3C /* ProfileStore.swift in Sources */,
 				CE1E6FB228589C1B004EBE3C /* SharedStore.swift in Sources */,
 				CE470A6F28575F140072E5E9 /* CounterStore.swift in Sources */,
